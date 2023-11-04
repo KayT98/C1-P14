@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <title>Project14</title>
+</head>
+
+<body>
+    <h1>My work site</h1>
+  <div id="map" style="width: 1000px; height: 500px;"></div>
+    <div id="form">
+        <label>Origin</label>
+        <input id="origin" type="textbox">
+        <label>Destination</label>
+        <input id="destination" type="textbox">
+        <input type="button" value="Search Route" onclick="calcRoute()">
+
+        <label>Search address: </label>
+        <input id="address" type="textbox">
+        <input type="button" value="Search address" onclick="getCoordinates()">
+    </div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3Yed5wtOk0dwK8NATHXZW4fNekTlVvpg&callback=initMap&v=weekly"defer></script>
+<script src="main.js"></script>
+</body>
+
+</html>

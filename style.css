@@ -1,0 +1,10 @@
+#map {
+    transform: translateX(45%);
+}
+
+#form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px
+}
