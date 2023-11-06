@@ -33,10 +33,9 @@ let directionsService;
                         infowindow.open(map, marker);
             });
             markers.push(marker);
-
-            map.addEventListener("click", (e) => {
+		    map.addListener("click", (e) => {
                 alert("You clicked the map at " + JSON.stringify(e.latLng.toJSON(), null, 2));
-            });
+            });   
         }
 
         window.initMap = initMap;
