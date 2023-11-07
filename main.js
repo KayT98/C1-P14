@@ -7,19 +7,17 @@ let directionsService;
         function initMap() {
             directionsService = new google.maps.DirectionsService();
             directionsRenderer = new google.maps.DirectionsRenderer();
-            geocoder = new google.maps.Geocoder();
-            
-            
+            geocoder = new google.maps.Geocoder();         
 
             const coordinates = { lat: 36.205021, lng: -95.868759};
 
             map = new google.maps.Map(document.getElementById("map"), {
                 zoom: 13,
                 center: coordinates,
-                mapTypeId: 'satellite'
+                mapTypeId: 'satellite' //set satellite as default mode
             });
             directionsRenderer.setMap(map);
-            map.setTilt(45);
+            map.setTilt(45); //tilt the map 45 degree
 
             const marker = new google.maps.Marker({
                 position: coordinates,
@@ -33,6 +31,7 @@ let directionsService;
                         infowindow.open(map, marker);
             });
             markers.push(marker);
+
 		    map.addListener("click", (e) => {
                 alert("You clicked the map at " + JSON.stringify(e.latLng.toJSON(), null, 2));
             });   
